@@ -1,3 +1,4 @@
+import fetch from "node-fetch"
 const SLASH_PARAM = "/?"
 const SLASH = "/"
 const PAGE_PARAM = "page="
@@ -17,4 +18,4 @@ const getCharacterByName = (name) => {
     return fetch(BASE_URL + CHARACTER_URI + SLASH_PARAM + NAME_PARAM + name)
 }
 
-module.exports = {getCharactersByPage, getCharacterById, getCharacterByName}
+export default {getCharactersByPage, getCharacterById, getCharacterByName}
