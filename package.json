@@ -4,8 +4,8 @@
   "description": "backend for rick and morty app",
   "main": "app.js",
   "scripts": {
-    "start": "./node_modules/.bin/netlify-lambda serve src",
-    "build": "./node_modules/.bin/netlify-lambda build src",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider && ./node_modules/.bin/netlify-lambda serve src",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider && ./node_modules/.bin/netlify-lambda build src",
     "dev": "nodemon src/api.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
