@@ -1,4 +1,4 @@
-import fetch from "node-fetch"
+const fetch = require("node-fetch")
 const SLASH_PARAM = "/?"
 const SLASH = "/"
 const PAGE_PARAM = "page="
