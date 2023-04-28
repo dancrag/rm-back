@@ -1,4 +1,5 @@
-const axios = require("axios")
+const axios = require("axios").default
+
 const SLASH_PARAM = "/?"
 const SLASH = "/"
 const PAGE_PARAM = "page="
@@ -11,11 +12,11 @@ const getCharactersByPage = (page) => {
 }
 
 const getCharacterById = (id) => {
-    return fetch(BASE_URL + CHARACTER_URI + SLASH + id)
+    return axios.get(BASE_URL + CHARACTER_URI + SLASH + id)
 }
 
 const getCharacterByName = (name) => {
-    return fetch(BASE_URL + CHARACTER_URI + SLASH_PARAM + NAME_PARAM + name)
+    return axios.get(BASE_URL + CHARACTER_URI + SLASH_PARAM + NAME_PARAM + name)
 }
 
-export default {getCharactersByPage, getCharacterById, getCharacterByName}
+module.exports = {getCharactersByPage, getCharacterById, getCharacterByName}
